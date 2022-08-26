@@ -27,7 +27,7 @@ user_input = st.empty()
 
 user_input1 = user_input.text_input("Enter Password", '')
 
-if(user_input1=='XCteam@276'):
+if(user_input1=='kartik'):
   st.dataframe(master)
   y= pd.DataFrame((image1['name'].unique()))
   st.markdown("# Trade-Log")
