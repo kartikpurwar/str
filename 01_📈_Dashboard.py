@@ -299,7 +299,7 @@ def check():
         conditions_met = conditions_met.append({'conditions_met':19},ignore_index=True)
 
     #20 Close is up 4 days in a row & Close < 200 SMA
-    if( (df['%Change'].iloc[-4] > 0) & (df['%Change'].iloc[-3] > 0) & (df['%Change'].iloc[-2] > 0) & (df['%Change'].iloc[-1] > 0) & (df['Adj Close'].iloc[-1] > df['200_SMA'].iloc[-1])):
+    if( (df['%Change'].iloc[-4] > 0) & (df['%Change'].iloc[-3] > 0) & (df['%Change'].iloc[-2] > 0) & (df['%Change'].iloc[-1] > 0) & (df['Adj Close'].iloc[-1] < df['200_SMA'].iloc[-1])):
         conditions_met = conditions_met.append({'conditions_met':20},ignore_index=True)
 
     #21 RSI(2) of VIX > 90 & VIX Close > Previous Day VIX & RSI(2) Index < 30 & Close > 200 EMA
